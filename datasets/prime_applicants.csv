@@ -1,0 +1,9 @@
+Customer_ID,Name,Annual_Income,Monthly_Inhand_Salary,Outstanding_Debt,Credit_Score,Highest_Risk_Type,Type_of_Loan,Num_of_Delayed_Payment,Credit_Utilization_Ratio,Amount_invested_monthly,Monthly_Balance,Total_EMI_per_month,Num_Credit_Inquiries,Payment_Behaviour
+PRIME-001,Arjun Sharma,145000,12083,8000,Good,None,Auto Loan,0,0.18,3200,8500,420,1,Low_spent_Large_value_payments
+PRIME-002,Priya Menon,180000,15000,12000,Good,None,Home Loan,1,0.22,4500,10200,680,2,High_spent_Large_value_payments
+PRIME-003,Rohan Gupta,220000,18333,5000,Good,None,Auto Loan,0,0.10,6000,13000,320,0,Low_spent_Large_value_payments
+PRIME-004,Ananya Iyer,160000,13333,15000,Good,None,Personal Loan,0,0.25,3800,9400,500,1,High_spent_Medium_value_payments
+PRIME-005,Vikram Nair,195000,16250,9000,Good,None,Auto Loan,1,0.19,5000,11500,450,2,Low_spent_Large_value_payments
+PRIME-006,Deepika Rao,250000,20833,20000,Good,None,Home Loan,0,0.28,7000,15000,900,1,High_spent_Large_value_payments
+PRIME-007,Suresh Patel,130000,10833,6000,Good,None,Credit-Builder Loan,0,0.15,2800,7800,280,0,Low_spent_Small_value_payments
+PRIME-008,Kavya Reddy,175000,14583,11000,Good,None,Auto Loan,1,0.21,4200,10000,520,2,High_spent_Large_value_payments

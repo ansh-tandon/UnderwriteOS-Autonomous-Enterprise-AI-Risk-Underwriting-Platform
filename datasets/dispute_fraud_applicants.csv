@@ -1,0 +1,7 @@
+Customer_ID,Name,Annual_Income,Monthly_Inhand_Salary,Outstanding_Debt,Credit_Score,Highest_Risk_Type,Type_of_Loan,Num_of_Delayed_Payment,Credit_Utilization_Ratio,Amount_invested_monthly,Monthly_Balance,Total_EMI_per_month,Num_Credit_Inquiries,Payment_Behaviour
+DISP-001,Arun Krishnan,68000,5667,45000,Poor,Identity_Theft_Risk,Personal Loan,12,0.95,0,300,1200,15,High_spent_Small_value_payments
+DISP-002,Meera Bose,72000,6000,55000,Poor,Active_Default,Payday Loan,15,0.97,0,200,1500,18,High_spent_Small_value_payments
+DISP-003,Sanjay Malhotra,58000,4833,48000,Poor,Identity_Theft_Risk,Subprime Loan,10,0.93,0,250,1100,12,High_spent_Small_value_payments
+DISP-004,Preethi Subramaniam,65000,5417,52000,Poor,Active_Default,Personal Loan,14,0.96,0,180,1350,16,High_spent_Small_value_payments
+DISP-005,Nikhil Aggarwal,80000,6667,60000,Poor,Identity_Theft_Risk,Payday Loan,11,0.94,0,220,1400,14,High_spent_Small_value_payments
+DISP-006,Swati Mishra,55000,4583,42000,Poor,Active_Default,Subprime Loan,13,0.98,0,160,1050,17,High_spent_Small_value_payments

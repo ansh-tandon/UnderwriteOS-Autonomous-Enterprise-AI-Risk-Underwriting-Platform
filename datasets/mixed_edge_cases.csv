@@ -1,0 +1,11 @@
+Customer_ID,Name,Annual_Income,Monthly_Inhand_Salary,Outstanding_Debt,Credit_Score,Highest_Risk_Type,Type_of_Loan,Num_of_Delayed_Payment,Credit_Utilization_Ratio,Amount_invested_monthly,Monthly_Balance,Total_EMI_per_month,Num_Credit_Inquiries,Payment_Behaviour
+MIX-001,Kiran Bhat,95000,7917,25000,Good,None,Auto Loan,1,0.35,2000,5200,650,3,High_spent_Medium_value_payments
+MIX-002,Divya Nambiar,72000,6000,38000,Standard,None,Personal Loan,3,0.55,800,2800,780,5,High_spent_Medium_value_payments
+MIX-003,Rajesh Pillai,110000,9167,15000,Good,None,Home Loan,0,0.22,3000,6500,480,2,Low_spent_Large_value_payments
+MIX-004,Anita Kapoor,58000,4833,32000,Standard,None,Payday Loan,4,0.68,400,1800,720,7,High_spent_Small_value_payments
+MIX-005,Sunil Menon,88000,7333,20000,Good,None,Auto Loan,2,0.31,1800,4800,540,3,High_spent_Large_value_payments
+MIX-006,Lakshmi Iyer,66000,5500,40000,Standard,None,Subprime Loan,5,0.72,300,1500,860,8,High_spent_Small_value_payments
+MIX-007,Praveen Shetty,125000,10417,12000,Good,None,Credit-Builder Loan,0,0.18,3500,7800,380,1,Low_spent_Large_value_payments
+MIX-008,Geeta Sharma,50000,4167,28000,Poor,None,Payday Loan,6,0.85,100,600,680,9,High_spent_Small_value_payments
+MIX-009,Harish Nair,142000,11833,18000,Good,None,Home Loan,1,0.26,4000,8900,720,2,High_spent_Large_value_payments
+MIX-010,Savita Rao,78000,6500,35000,Standard,None,Personal Loan,3,0.60,600,2200,800,6,High_spent_Medium_value_payments

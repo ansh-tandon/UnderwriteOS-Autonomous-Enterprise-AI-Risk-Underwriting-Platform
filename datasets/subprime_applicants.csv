@@ -1,0 +1,9 @@
+Customer_ID,Name,Annual_Income,Monthly_Inhand_Salary,Outstanding_Debt,Credit_Score,Highest_Risk_Type,Type_of_Loan,Num_of_Delayed_Payment,Credit_Utilization_Ratio,Amount_invested_monthly,Monthly_Balance,Total_EMI_per_month,Num_Credit_Inquiries,Payment_Behaviour
+SUB-001,Rahul Verma,42000,3500,18000,Poor,None,Payday Loan,5,0.82,200,800,620,8,High_spent_Small_value_payments
+SUB-002,Sneha Pillai,38000,3167,22000,Standard,None,Payday Loan,4,0.75,150,600,580,7,High_spent_Small_value_payments
+SUB-003,Manish Tiwari,55000,4583,30000,Poor,None,Subprime Loan,6,0.88,100,500,750,10,High_spent_Small_value_payments
+SUB-004,Pooja Desai,48000,4000,25000,Standard,None,Payday Loan,3,0.79,180,700,640,6,High_spent_Medium_value_payments
+SUB-005,Amit Choudhary,35000,2917,19000,Poor,None,Subprime Loan,7,0.91,80,400,520,9,High_spent_Small_value_payments
+SUB-006,Ritu Saxena,62000,5167,35000,Standard,None,Payday Loan,4,0.84,120,650,810,8,High_spent_Small_value_payments
+SUB-007,Vijay Kumar,41000,3417,21000,Poor,None,Payday Loan,5,0.77,90,550,590,7,High_spent_Small_value_payments
+SUB-008,Nisha Joshi,52000,4333,28000,Standard,None,Subprime Loan,3,0.80,160,720,700,6,High_spent_Medium_value_payments

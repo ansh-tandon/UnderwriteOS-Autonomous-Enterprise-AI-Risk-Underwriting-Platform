@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # 1. Qdrant - Vector Database (Replaces FAISS)
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: risk_qdrant
+    ports:
+      - "6333:6333" # REST API
+      - "6334:6334" # gRPC API
+    volumes:
+      - qdrant_data:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__GRPC_PORT=6334
+
+  # 2. PostgreSQL - Relational Database for Applicant Data
+  postgres:
+    image: postgres:15-alpine
+    container_name: risk_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpassword
+      POSTGRES_DB: credit_risk_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # 3. PgAdmin - Web UI for PostgreSQL
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: risk_pgadmin
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@risk.com
+      PGADMIN_DEFAULT_PASSWORD: adminpassword
+    depends_on:
+      - postgres
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+  # 4. MinIO - S3 Compatible Object Storage for Raw Kaggle Data/PDFs
+  minio:
+    image: minio/minio
+    container_name: risk_minio
+    ports:
+      - "9000:9000" # API
+      - "9001:9001" # Web UI
+    environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: adminpassword
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+
+  # 5. MinIO Setup - Auto-creates the 'datasets' bucket on startup
+  minio-createbucket:
+    image: minio/mc
+    container_name: risk_minio_setup
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      sleep 5;
+      /usr/bin/mc config host add myminio http://minio:9000 admin adminpassword;
+      /usr/bin/mc mb myminio/datasets;
+      /usr/bin/mc policy set public myminio/datasets;
+      exit 0;
+      "
+
+volumes:
+  qdrant_data:
+  postgres_data:
+  pgadmin_data:
+  minio_data:

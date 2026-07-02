@@ -56,7 +56,13 @@ class CustomerRiskState(TypedDict):
 
     # ── Computed / Router Fields ────────────────────────────────────────────
     risk_track: str                  # prime / subprime / dispute
-    
+
+    # NOVELTY (Baseline Comparison, Sections 3.5 / 3.14.4): populated only
+    # when the LLM-delegated router variant is used in place of the
+    # deterministic router. Left unset in the production pipeline.
+    router_latency_s: Optional[float]
+    router_mode_used: Optional[str]
+
     # ── Branch Outputs ──────────────────────────────────────────────────────
     drafted_offer: str
     branch_notes: str
@@ -68,7 +74,14 @@ class CustomerRiskState(TypedDict):
     # ── Evaluation & Repair Loop ────────────────────────────────────────────
     eval_issues: list
     repair_count: int
-    final_offer: str          
+    final_offer: str
+
+    # NOVELTY (Convergence Telemetry, Sections 3.1 / 3.14.1): one entry is
+    # appended by auditor_evaluator on every pass through Layer 5, giving a
+    # full per-iteration trajectory of {iteration, score, status, latency_s}.
+    # Annotated with operator.add so LangGraph accumulates entries across
+    # the bounded repair loop instead of overwriting them each call.
+    repair_history: Annotated[list, operator.add]
 
     # ── Compliance & Final Output ───────────────────────────────────────────
     compliance_status: str           
